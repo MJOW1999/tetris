@@ -24,7 +24,9 @@ Wanted to practice some React fundamentals as well as build a fun app around one
 
 - Create a React app and install styled components
 - Find [Futura Black]() font
-- Create initial components required for the game: `Tetris`, `StartButton`, `Stage`, `Display` and `Cell`
+- Create initial components required for the game: `Tetris`, `StartButton`, `Stage`, `Display` and `Cell`.
+- Create a helper function which renders the stage.
+- Create shape for each tetromino and a function to randomise it.
 
 In Progress ...
 
