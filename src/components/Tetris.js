@@ -1,25 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
+import { styled } from "styled-components";
+import Description from "./Description";
 import Stage from "./Stage";
 import Display from "./Display";
 import StartButton from "./StartButton";
-
 import { createStage } from "../helpers";
-import { styled } from "styled-components";
-import Description from "./Description";
+import { usePlayer } from "../hooks/usePlayer";
+import { useStage } from "../hooks/useStage";
 
 const Tetris = () => {
+  const [dropTime, setDropTime] = useState(null);
+  const [gameOver, setGameOver] = useState(false);
+
+  const [player, updatePlayerPos, resetPlayer] = usePlayer();
+  const [stage, setStage] = useStage(player);
+
+  // Game actions
+  const movePlayer = (dir) => {
+    updatePlayerPos({ x: dir, y: 0 });
+  };
+
+  const startGame = () => {
+    // Reset to default
+    setStage(createStage());
+    resetPlayer();
+  };
+
+  const dropPlayer = () => {
+    drop();
+  };
+
+  const drop = () => {
+    updatePlayerPos({ x: 0, y: 1, collided: false });
+  };
+
+  const move = ({ keyCode }) => {
+    if (!gameOver) {
+      switch (keyCode) {
+        default:
+          break;
+        // Left key
+        case 37:
+          movePlayer(-1);
+          break;
+        // Right key
+        case 39:
+          movePlayer(1);
+          break;
+        case 40:
+          dropPlayer();
+      }
+    }
+  };
+
   return (
-    <TetrisWrapper>
+    <TetrisWrapper role="button" tabIndex={0} onKeyDown={(e) => move(e)}>
       <Description />
       <Container>
-        <Stage stage={createStage()} />
+        <Stage stage={stage} />
         <aside>
-          <section>
-            <Display text={"Score"} />
-            <Display text={"Rows"} />
-            <Display text={"Level"} />
-          </section>
-          <StartButton />
+          {gameOver ? (
+            <Display gameOver={gameOver} text={"Game Over"} />
+          ) : (
+            <section>
+              <Display text={"Score"} />
+              <Display text={"Rows"} />
+              <Display text={"Level"} />
+            </section>
+          )}
+          <StartButton callback={startGame} />
         </aside>
       </Container>
     </TetrisWrapper>
