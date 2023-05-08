@@ -5,10 +5,12 @@ import StartButton from "./StartButton";
 
 import { createStage } from "../helpers";
 import { styled } from "styled-components";
+import Description from "./Description";
 
 const Tetris = () => {
   return (
     <TetrisWrapper>
+      <Description />
       <Container>
         <Stage stage={createStage()} />
         <aside>

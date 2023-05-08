@@ -28,6 +28,7 @@ Wanted to practice some React fundamentals as well as build a fun app around one
 - Create a helper function which renders the stage.
 - Create shape for each tetromino and a function to randomise it.
 - Style the webpage using styled components.
+  - Create `Description` component which sets out the [rules](https://www.interaction-design.org/literature/article/a-game-explained-an-example-of-a-single-game-and-how-it-meets-the-rules-of-fun#:~:text=as%20you%20can.-,Rules,needed%20structure%20to%20our%20play.) of the game.
 
 In Progress ...
 
