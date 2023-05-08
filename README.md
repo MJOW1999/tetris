@@ -1,2 +1,49 @@
 # tetris
-React based Tetris app
+
+> React based Tetris app
+
+## Table of contents
+
+- [Technologies](#technologies)
+- [Inspiration](#inspiration)
+- [Process](#process)
+- [Features](#features)
+- [Status](#status)
+- [Contact](#contact)
+
+## Technologies
+
+- React
+- Styled Components
+
+## Inspiration
+
+Wanted to practice some React fundamentals as well as build a fun app around one of my favourite games
+
+## Process
+
+- Create a React app and install styled components
+- Find [Futura Black]() font
+
+In Progress ...
+
+## Features
+
+- In Progress
+
+To-do list:
+
+## Status
+
+Project is: _in progress_
+
+## Contact
+
+Created by [@MJOW1999](https://github.com/MJOW1999)
+
+Feel free to contact me:
+
+- Email: michael.jow.williams@gmail.com
+- LinkedIn: [Michael Williams](https://www.linkedin.com/in/michael-williams-17a9b81a0)
+
+Also follow my Twitter: [@michWills99](https://twitter.com/michWills99)
