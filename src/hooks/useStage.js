@@ -4,6 +4,7 @@ import { createStage } from "../helpers";
 // Create the stage here
 export const useStage = (player, resetPlayer) => {
   const [stage, setStage] = useState(createStage());
+
   useEffect(() => {
     const updateStage = (prevStage) => {
       // First flush the stage
@@ -12,8 +13,11 @@ export const useStage = (player, resetPlayer) => {
       );
 
       // Draw a new stage
+      console.log({ player });
       player.tetromino.forEach((row, y) => {
+        console.log({ row });
         row.forEach((value, x) => {
+          console.log({ value });
           if (value !== 0) {
             newStage[y + player.pos.y][x + player.pos.x] = [
               value,

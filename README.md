@@ -30,7 +30,8 @@ Wanted to practice some React fundamentals as well as build a fun app around one
 - Style the webpage using styled components.
   - Create `Description` component which sets out the [rules](https://www.interaction-design.org/literature/article/a-game-explained-an-example-of-a-single-game-and-how-it-meets-the-rules-of-fun#:~:text=as%20you%20can.-,Rules,needed%20structure%20to%20our%20play.) of the game.
 - Create custom hooks: `useInterval` (_borrowed from Dan Abramov_), `usePlayer`, `useStage` and `useGameStatus`
-- Collision detection to stop tetrominoes from moving outside of the game grid and losing shape
+- Collision detection to stop tetrominoes from moving outside of the game grid and losing shape.
+- Rotate the tetrominoes by 90 degrees. Collision detection is included here too
 
 In Progress ...
 
