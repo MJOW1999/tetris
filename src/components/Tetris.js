@@ -4,7 +4,7 @@ import Description from "./Description";
 import Stage from "./Stage";
 import Display from "./Display";
 import StartButton from "./StartButton";
-import { createStage } from "../helpers";
+import { createStage, checkCollision } from "../helpers";
 import { usePlayer } from "../hooks/usePlayer";
 import { useStage } from "../hooks/useStage";
 
@@ -17,13 +17,16 @@ const Tetris = () => {
 
   // Game actions
   const movePlayer = (dir) => {
-    updatePlayerPos({ x: dir, y: 0 });
+    if (!checkCollision(player, stage, { x: dir, y: 0 })) {
+      updatePlayerPos({ x: dir, y: 0 });
+    }
   };
 
   const startGame = () => {
     // Reset to default
     setStage(createStage());
     resetPlayer();
+    setGameOver(false);
   };
 
   const dropPlayer = () => {
@@ -31,7 +34,16 @@ const Tetris = () => {
   };
 
   const drop = () => {
-    updatePlayerPos({ x: 0, y: 1, collided: false });
+    if (!checkCollision(player, stage, { x: 0, y: 1 })) {
+      updatePlayerPos({ x: 0, y: 1, collided: false });
+    } else {
+      // The game is over
+      if (player.pos.y < 1) {
+        setGameOver(true);
+        setDropTime(null);
+      }
+      updatePlayerPos({ x: 0, y: 0, collided: true });
+    }
   };
 
   const move = ({ keyCode }) => {
