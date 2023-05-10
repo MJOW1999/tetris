@@ -7,7 +7,7 @@ export const useGameStatus = (rowsCleared) => {
 
   const calcScore = useCallback(() => {
     let linePoints = [40, 100, 300, 1200];
-    if (rowsCleared > 0 || rowsCleared < 5) {
+    if (rowsCleared > 0 && rowsCleared < 5) {
       // Formula for Tetris scoring
       setScore((prev) => prev + linePoints[rowsCleared - 1]);
       setRows((prev) => prev + rowsCleared);
