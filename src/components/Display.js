@@ -2,7 +2,15 @@ import React from "react";
 import { styled } from "styled-components";
 
 const Display = ({ gameOver, text }) => {
-  return <DisplayWrapper gameOver={gameOver}>{text}</DisplayWrapper>;
+  return (
+    <>
+      {gameOver ? (
+        <GameOver gameOver={gameOver}>{text}</GameOver>
+      ) : (
+        <DisplayWrapper>{text}</DisplayWrapper>
+      )}
+    </>
+  );
 };
 
 const DisplayWrapper = styled.main`
@@ -19,6 +27,10 @@ const DisplayWrapper = styled.main`
   background: black;
   font-family: Pixel, Arial, Helvetica, sans-serif;
   font-size: 0.8rem;
+`;
+
+const GameOver = styled(DisplayWrapper)`
+  justify-content: center;
 `;
 
 export default Display;

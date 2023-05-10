@@ -16,4 +16,4 @@ const CellWrapper = styled.main`
   border-left-color: rgba(${(props) => props.color}, 0.3)
 `;
 
-export default Cell;
+export default React.memo(Cell);

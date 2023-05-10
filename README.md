@@ -33,6 +33,7 @@ Wanted to practice some React fundamentals as well as build a fun app around one
 - Collision detection to stop tetrominoes from moving outside of the game grid and losing shape.
 - Rotate the tetrominoes by 90 degrees. Collision detection is included here too
 - Clear the rows when tetris occurs and add a drop time, so the tetrominoes drop automatically
+- Add scoring system
 
 In Progress ...
 
