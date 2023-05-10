@@ -1,4 +1,4 @@
-# tetris
+# Tetris
 
 > React based Tetris app
 
@@ -14,11 +14,12 @@
 ## Technologies
 
 - React
+- JavaScript
 - Styled Components
 
 ## Inspiration
 
-Wanted to practice some React fundamentals as well as build a fun app around one of my favourite games
+Wanted to practice some React fundamentals (**hooks** (`useState`, `useEffect`, `useCallback`, `useMemo`) and custom hooks) as well as build a fun app around one of my favourite games!
 
 ## Process
 
@@ -34,18 +35,21 @@ Wanted to practice some React fundamentals as well as build a fun app around one
 - Rotate the tetrominoes by 90 degrees. Collision detection is included here too
 - Clear the rows when tetris occurs and add a drop time, so the tetrominoes drop automatically
 - Add scoring system
-
-In Progress ...
+- Deploy using [Netlify](https://mjow1999-tetris.netlify.app/)
 
 ## Features
 
-- In Progress
+- Functional Tetris game made using React and styled-components
+- Stylish and Accessible webpage
+- Scoring based on [original Nintendo system](https://tetris.wiki/Scoring#Original_Nintendo_scoring_system)
 
 To-do list:
 
+- [ ] Monitor edge case errors
+
 ## Status
 
-Project is: _in progress_
+Project is: **_completed_**
 
 ## Contact
 
