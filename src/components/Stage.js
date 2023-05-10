@@ -6,7 +6,7 @@ const Stage = ({ stage }) => {
   return (
     <Grid width={stage[0].length} height={stage.length}>
       {/* Create initial stage (should be empty cells) */}
-      {stage.map((row) =>
+      {stage?.map((row) =>
         row.map((cell, i) => <Cell key={i} type={cell[0]} />)
       )}
     </Grid>

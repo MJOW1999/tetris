@@ -32,6 +32,7 @@ Wanted to practice some React fundamentals as well as build a fun app around one
 - Create custom hooks: `useInterval` (_borrowed from Dan Abramov_), `usePlayer`, `useStage` and `useGameStatus`
 - Collision detection to stop tetrominoes from moving outside of the game grid and losing shape.
 - Rotate the tetrominoes by 90 degrees. Collision detection is included here too
+- Clear the rows when tetris occurs and add a drop time, so the tetrominoes drop automatically
 
 In Progress ...
 
