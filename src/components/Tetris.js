@@ -39,9 +39,9 @@ const Tetris = () => {
 
   const drop = () => {
     // Level increases every 5 rows cleared
-    if (rows > level * 5) {
+    if (rows > level + 1 * 5) {
       setLevel((prev) => prev + 1);
-      setDropTime(1000 / level + 200);
+      setDropTime(1000 / (level + 1) + 200);
     }
     if (!checkCollision(player, stage, { x: 0, y: 1 })) {
       updatePlayerPos({ x: 0, y: 1, collided: false });
