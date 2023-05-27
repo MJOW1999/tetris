@@ -1,3 +1,4 @@
+import React, { memo } from "react";
 import { styled } from "styled-components";
 
 const Description = () => {
@@ -29,4 +30,4 @@ const Rules = styled.p`
   max-width: min(900px, 90vw);
   margin: 0 auto;
 `;
-export default Description;
+export default memo(Description);
