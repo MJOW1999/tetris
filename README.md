@@ -4,12 +4,17 @@
 
 ## Table of contents
 
+- [Tutorial](#tutorial)
 - [Technologies](#technologies)
 - [Inspiration](#inspiration)
 - [Process](#process)
 - [Features](#features)
 - [Status](#status)
 - [Contact](#contact)
+
+## Tutorial
+
+A short [tutorial](https://www.loom.com/share/bf69f610d46d4fe4b04bf08e84d53653) of the deployed Tetris app
 
 ## Technologies
 
